@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import Main from './Component/Main'
+import './styles/stylesheet.css'
 
 // const tasks = ['take out the trash', 'shovel the driveway', 'walk the dog'];
 
