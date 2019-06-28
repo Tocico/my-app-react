@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Main from './Component/Main'
 import './styles/stylesheet.css'
 import {BrowserRouter} from 'react-router-dom'
+import {createStore} from 'redux'
+import rootReducer from './redux/reducer'
+import {Provider} from 'react-redux'
+import App from './Component/App'
 
-
+const store = createStore(rootReducer)
 
 // const tasks = ['take out the trash', 'shovel the driveway', 'walk the dog'];
 
@@ -75,6 +78,6 @@ import {BrowserRouter} from 'react-router-dom'
 //        </div>
 //     }
 // }
-ReactDOM.render(<BrowserRouter><Main/></BrowserRouter>, document.getElementById('root'));
+ReactDOM.render(<Provider store={store}><BrowserRouter><App/></BrowserRouter></Provider>, document.getElementById('root'));
 
 // ----------------------------------- end of props -----------------------------
